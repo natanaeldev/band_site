@@ -16,3 +16,7 @@
     @content;
   }
 }
+
+@mixin img {
+  width: 100%;
+}

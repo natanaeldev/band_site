@@ -88,10 +88,6 @@ video {
   vertical-align: baseline;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-}
 .header__nav-bar {
   display: flex;
   align-items: center;
@@ -147,4 +143,23 @@ video {
 .header__nav-bar--link {
   text-decoration: none;
   color: #afafaf;
+}
+.header__hero--title {
+  display: flex;
+  position: absolute;
+  top: 14rem;
+  font-size: 30px;
+  left: 2rem;
+  color: #ffffff;
+}
+.header__hero--img {
+  width: 100%;
+}
+
+.main-content__about {
+  display: flex;
+  flex-direction: column;
+}
+.main-content__about--img {
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

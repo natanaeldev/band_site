@@ -1,0 +1,13 @@
+@use "../utilities/var" as *;
+@use "../utilities/mixin" as *;
+
+.main-content {
+  &__about {
+    display: flex;
+    flex-direction: column;
+
+    &--img {
+      @include img;
+    }
+  }
+}

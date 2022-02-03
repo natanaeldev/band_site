@@ -2,9 +2,6 @@
 @use "../utilities/mixin" as *;
 
 .header {
-  display: flex;
-  align-items: center;
-
   &__nav-bar {
     display: flex;
     align-items: center;
@@ -51,6 +48,19 @@
       text-decoration: none;
 
       color: $silver;
+    }
+  }
+  &__hero {
+    &--title {
+      display: flex;
+      position: absolute;
+      top: 14rem;
+      font-size: 30px;
+      left: 2rem;
+      color: $white;
+    }
+    &--img {
+      width: 100%;
     }
   }
 }
