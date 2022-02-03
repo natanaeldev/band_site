@@ -1,0 +1,18 @@
+@use "../utilities/var" as *;
+@mixin mobile {
+  @media screen and (min-width: $mobile-size-m) and (max-width: $mobile-size-mx) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-size-m) and (max-width: $tablet-size-mx) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-size-m) {
+    @content;
+  }
+}

@@ -1,1 +1,56 @@
+@use "../utilities/var" as *;
+@use "../utilities/mixin" as *;
 
+.header {
+  display: flex;
+  align-items: center;
+
+  &__nav-bar {
+    display: flex;
+    align-items: center;
+    background-color: $transparent-black;
+    width: 100%;
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &--options {
+      @include mobile {
+        display: flex;
+        width: 20rem;
+      }
+      @include tablet {
+        display: flex;
+        width: 20rem;
+      }
+      @include desktop {
+        display: flex;
+        width: 20rem;
+      }
+    }
+    &--logo {
+      height: 20px;
+      width: 120px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding: 8px;
+      @include tablet {
+        margin-left: 1.5rem;
+      }
+      @include desktop {
+        margin-left: 4rem;
+      }
+    }
+    &--list {
+      list-style: none;
+      padding: 8px;
+      width: 10rem;
+      text-align: center;
+    }
+    &--link {
+      text-decoration: none;
+
+      color: $silver;
+    }
+  }
+}
