@@ -2,3 +2,5 @@
 .DS_store
 # Ignore node_modules folder
 node_modules
+
+bio.css.map
