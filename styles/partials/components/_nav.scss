@@ -1,6 +1,6 @@
 @use "../utilities/var" as *;
 @use "../utilities/mixin" as *;
-
+@use "../utilities/font" as *;
 .header {
   &__nav-bar {
     display: flex;
@@ -54,9 +54,25 @@
     &--title {
       display: flex;
       position: absolute;
-      top: 14rem;
-      font-size: 30px;
-      left: 2rem;
+      @include mobile {
+        top: 13rem;
+        font-size: 30px;
+        line-height: 32px;
+        left: 2rem;
+        font-family: "avenir-bold", sans-serif;
+      }
+      @include tablet {
+        top: 40rem;
+        font-size: 60px;
+        left: 2rem;
+        font-family: "avenir-bold", sans-serif;
+      }
+      @include desktop {
+        top: 30rem;
+        font-size: 60px;
+        left: 2rem;
+        font-family: "avenir-bold", sans-serif;
+      }
       color: $white;
     }
     &--img {

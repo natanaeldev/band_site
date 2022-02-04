@@ -88,6 +88,24 @@ video {
   vertical-align: baseline;
 }
 
+@font-face {
+  font-family: "avenir-bold";
+  src: url(../../../assets/fonts/AvenirNextLTPro-Bold.eot), url(../../../assets/fonts/AvenirNextLTPro-Bold.otf) url(../../../assets/fonts/AvenirNextLTPro-Bold.ttf) url(../../../assets/fonts/AvenirNextLTPro-Bold.woff) url(../../../assets/fonts/AvenirNextLTPro-Bold.woff2);
+  font-family: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir-demi";
+  src: url(../../../assets/fonts/AvenirNextLTPro-Demi.eot), url(../../../assets/fonts/AvenirNextLTPro-Demi.otf) url(../../../assets/fonts/AvenirNextLTPro-Demi.ttf) url(../../../assets/fonts/AvenirNextLTPro-Demi.woff) url(../../../assets/fonts/AvenirNextLTPro-Demi.woff2);
+  font-family: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir-regular";
+  src: url(../../../assets/fonts/AvenirNextLTPro-Regular.eot), url(../../../assets/fonts/AvenirNextLTPro-Regular.otf) url(../../../assets/fonts/AvenirNextLTPro-Regular.ttf) url(../../../assets/fonts/AvenirNextLTPro-Regular.woff) url(../../../assets/fonts/AvenirNextLTPro-Regular.woff2);
+  font-family: 400;
+  font-style: normal;
+}
 .header__nav-bar {
   display: flex;
   align-items: center;
@@ -147,19 +165,102 @@ video {
 .header__hero--title {
   display: flex;
   position: absolute;
-  top: 14rem;
-  font-size: 30px;
-  left: 2rem;
   color: #ffffff;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header__hero--title {
+    top: 13rem;
+    font-size: 30px;
+    line-height: 32px;
+    left: 2rem;
+    font-family: "avenir-bold", sans-serif;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__hero--title {
+    top: 40rem;
+    font-size: 60px;
+    left: 2rem;
+    font-family: "avenir-bold", sans-serif;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__hero--title {
+    top: 30rem;
+    font-size: 60px;
+    left: 2rem;
+    font-family: "avenir-bold", sans-serif;
+  }
 }
 .header__hero--img {
   width: 100%;
 }
 
-.main-content__about {
+.main-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.main-content__about {
+  padding: 16px;
+}
+.main-content__about--p {
+  font-size: 24px;
+  margin: 16px;
+  line-height: 32px;
+  font-size: "avenir-regular", san-serif;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .main-content__about--p {
+    display: flex;
+    width: 250px;
+    flex-wrap: wrap;
+    font-size: 15px;
+    margin: 16px;
+    line-height: 20px;
+    font-size: "avenir-demi", san-serif;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .main-content__about--title {
+    padding-top: 24px;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "avenir-bold", sans-serif;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .main-content__about--title {
+    padding-top: 48px;
+    padding-bottom: 36px;
+    font-size: 36px;
+    line-height: 44px;
+    font-family: "avenir-bold", sans-serif;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-content__about--title {
+    padding-top: 48px;
+    padding-bottom: 36px;
+    font-size: 36px;
+    line-height: 44px;
+    font-family: "avenir-demi", sans-serif;
+  }
+}
+.main-content__about--gallery {
+  flex-wrap: wrap;
+}
+.main-content__about--main-img {
+  width: 270px;
+  padding: 16px;
 }
 .main-content__about--img {
-  width: 100%;
+  width: 500px;
+  padding: 16px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .main-content__about--img {
+    width: 250px;
+    padding: 16px;
+  }
 }/*# sourceMappingURL=bio.css.map */

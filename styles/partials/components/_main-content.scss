@@ -2,12 +2,65 @@
 @use "../utilities/mixin" as *;
 
 .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__about {
-    display: flex;
-    flex-direction: column;
+    padding: 16px;
+    &--p {
+      font-size: 24px;
+      margin: 16px;
+      line-height: 32px;
+      font-size: "avenir-regular", san-serif;
+      @include mobile {
+        display: flex;
+        width: 250px;
+        flex-wrap: wrap;
+        font-size: 15px;
+        margin: 16px;
+        line-height: 20px;
+        font-size: "avenir-demi", san-serif;
+      }
+    }
+    &--title {
+      @include mobile {
+        padding-top: 24px;
+        font-size: 24px;
+        line-height: 32px;
+        font-family: "avenir-bold", sans-serif;
+      }
 
+      @include tablet {
+        padding-top: 48px;
+        padding-bottom: 36px;
+        font-size: 36px;
+        line-height: 44px;
+        font-family: "avenir-bold", sans-serif;
+      }
+
+      @include desktop {
+        padding-top: 48px;
+        padding-bottom: 36px;
+        font-size: 36px;
+        line-height: 44px;
+        font-family: "avenir-demi", sans-serif;
+      }
+    }
+    &--gallery {
+      flex-wrap: wrap;
+    }
+
+    &--main-img {
+      width: 270px;
+      padding: 16px;
+    }
     &--img {
-      @include img;
+      width: 500px;
+      padding: 16px;
+      @include mobile {
+        width: 250px;
+        padding: 16px;
+      }
     }
   }
 }
