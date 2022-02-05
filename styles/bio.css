@@ -116,10 +116,17 @@ body {
 }
 .header__nav-bar {
   width: 100%;
-  padding-top: 1rem;
+  padding: 1rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__nav-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
 }
 .header__nav-bar--options {
   display: flex;
@@ -176,4 +183,32 @@ body {
 .footer {
   padding: 16px;
   background-color: #323232;
+  display: flex;
+}
+.footer__wrapper {
+  color: #ffffff;
+  text-align: left;
+}
+.footer__title {
+  font-size: 25px;
+  line-height: 22px;
+  padding: 13px 0;
+  font-family: "avenir-bold" sans-serif;
+}
+.footer__icon {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.footer__icon--size {
+  width: 2em;
+}
+.footer__p {
+  padding: 13px 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "avenir-regular" sans-serif;
+}
+.footer__copy-right {
+  margin: 3rem 0 0.25rem;
 }/*# sourceMappingURL=bio.css.map */
