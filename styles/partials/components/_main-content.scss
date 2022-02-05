@@ -1,66 +1,48 @@
 @use "../utilities/var" as *;
 @use "../utilities/mixin" as *;
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &__about {
-    padding: 16px;
-    &--p {
-      font-size: 24px;
-      margin: 16px;
-      line-height: 32px;
-      font-size: "avenir-regular", san-serif;
-      @include mobile {
-        display: flex;
-        width: 250px;
-        flex-wrap: wrap;
-        font-size: 15px;
-        margin: 16px;
-        line-height: 20px;
-        font-size: "avenir-demi", san-serif;
-      }
-    }
-    &--title {
-      @include mobile {
-        padding-top: 24px;
-        font-size: 24px;
-        line-height: 32px;
-        font-family: "avenir-bold", sans-serif;
-      }
-
-      @include tablet {
-        padding-top: 48px;
-        padding-bottom: 36px;
-        font-size: 36px;
-        line-height: 44px;
-        font-family: "avenir-bold", sans-serif;
-      }
-
-      @include desktop {
-        padding-top: 48px;
-        padding-bottom: 36px;
-        font-size: 36px;
-        line-height: 44px;
-        font-family: "avenir-demi", sans-serif;
-      }
-    }
-    &--gallery {
-      flex-wrap: wrap;
-    }
-
-    &--main-img {
-      width: 270px;
-      padding: 16px;
-    }
-    &--img {
-      width: 500px;
-      padding: 16px;
-      @include mobile {
-        width: 250px;
-        padding: 16px;
-      }
-    }
+.hero {
+  background-image: url(../../../assets/Images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+  &__wrapper {
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
+
+  &__title {
+    color: $white;
+  }
+}
+
+.about {
+  padding: 16px;
+  // &__wrapper {
+
+  // }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__p {
+    margin: 1rem;
+  }
+}
+
+.gallery {
+  &__img {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+.footer {
+  padding: 16px;
+  background-color: $transparent-black;
 }

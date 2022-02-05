@@ -1,6 +1,6 @@
 @use "../utilities/var" as *;
 @mixin mobile {
-  @media screen and (min-width: $mobile-size-m) and (max-width: $mobile-size-mx) {
+  @media screen and (max-width: $mobile-size-mx) {
     @content;
   }
 }
