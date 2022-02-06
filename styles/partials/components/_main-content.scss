@@ -9,10 +9,9 @@
   background-repeat: no-repeat;
   height: 50vh;
   width: 100%;
-  @include desktop {
-    background-image: linear-gradient(rgba(skyblue, 0.5), rgba(skyblue, 0.5)),
+  @include tablet {
+    background-image: linear-gradient(rgba($opacity, 50%), rgba($opacity, 50%)),
       url(../../../assets/Images/hero-bio.jpg);
-
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,26 +23,33 @@
     height: 100%;
     display: flex;
     align-items: center;
+    @include tablet {
+      padding: 0 5rem;
+      height: 100%;
+    }
   }
 
   &__title {
     color: $white;
     font-size: 24px;
+    @include tablet {
+      color: $white;
+      font-size: 50px;
+    }
   }
 }
 
 .about {
   padding: 16px;
-  @include desktop {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 auto;
+    // justify-content: center;
+    padding: 36px;
   }
   &__title {
     font-size: 25px;
     font-family: $font-bold;
-
     padding-top: 20px;
     padding-bottom: 16px;
   }
@@ -52,8 +58,15 @@
     margin: 16px;
   }
   &__wrapper {
-    @include desktop {
-      width: 1050px;
+    @include tablet {
+      padding: 0 32px;
+    }
+    &--p {
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
     }
   }
 
@@ -73,12 +86,23 @@
   &__img {
     width: 100%;
     margin: 10px 0;
+    @include tablet {
+      width: 200px;
+      padding-bottom: 10px;
+    }
   }
   &__title {
     padding-top: 20px;
     padding-bottom: 16px;
     font-family: $font-bold;
     font-size: 24px;
+  }
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 }
 

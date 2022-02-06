@@ -176,9 +176,9 @@ body {
   height: 50vh;
   width: 100%;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero {
-    background-image: linear-gradient(rgba(135, 206, 235, 0.5), rgba(135, 206, 235, 0.5)), url(../../../assets/Images/hero-bio.jpg);
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/Images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -192,20 +192,31 @@ body {
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__wrapper {
+    padding: 0 5rem;
+    height: 100%;
+  }
+}
 .hero__title {
   color: #ffffff;
   font-size: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__title {
+    color: #ffffff;
+    font-size: 50px;
+  }
 }
 
 .about {
   padding: 16px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .about {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 auto;
+    padding: 36px;
   }
 }
 .about__title {
@@ -218,9 +229,16 @@ body {
   font-family: "avenir-bold", sans-serif;
   margin: 16px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .about__wrapper {
-    width: 1050px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about__wrapper--p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 .about__img {
@@ -239,11 +257,24 @@ body {
   width: 100%;
   margin: 10px 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .gallery__img {
+    width: 200px;
+    padding-bottom: 10px;
+  }
+}
 .gallery__title {
   padding-top: 20px;
   padding-bottom: 16px;
   font-family: "avenir-bold", sans-serif;
   font-size: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .footer {
