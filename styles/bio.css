@@ -121,13 +121,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .header__nav-bar {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-}
 .header__nav-bar--options {
   display: flex;
   justify-content: center;
@@ -136,7 +129,8 @@ body {
 .header__nav-bar--list {
   text-align: center;
   width: 50%;
-  margin-top: 1rem;
+  height: 8vh;
+  padding-top: 1rem;
   list-style: none;
 }
 .header__nav-bar--link {
@@ -148,12 +142,22 @@ body {
 }
 
 .hero {
-  background-image: url(../../../assets/Images/hero-bio.jpg);
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/Images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 50vh;
   width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    background-image: linear-gradient(rgba(135, 206, 235, 0.5), rgba(135, 206, 235, 0.5)), url(../../../assets/Images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+  }
 }
 .hero__wrapper {
   padding: 0 1rem;
@@ -163,13 +167,42 @@ body {
 }
 .hero__title {
   color: #ffffff;
+  font-size: 24px;
 }
 
 .about {
   padding: 16px;
 }
+@media screen and (min-width: 1280px) {
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 auto;
+  }
+}
+.about__title {
+  font-size: 25px;
+  font-family: "avenir-bold", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 16px;
+}
+.about__subtitle {
+  font-family: "avenir-bold", sans-serif;
+  margin: 16px;
+}
+@media screen and (min-width: 1280px) {
+  .about__wrapper {
+    width: 1050px;
+  }
+}
 .about__img {
   width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .about__img {
+    width: 500px;
+  }
 }
 .about__p {
   margin: 1rem;
@@ -179,6 +212,12 @@ body {
   width: 100%;
   margin: 10px 0;
 }
+.gallery__title {
+  padding-top: 20px;
+  padding-bottom: 16px;
+  font-family: "avenir-bold", sans-serif;
+  font-size: 24px;
+}
 
 .footer {
   padding: 16px;
@@ -186,6 +225,9 @@ body {
   display: flex;
 }
 .footer__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   color: #ffffff;
   text-align: left;
 }
@@ -198,10 +240,15 @@ body {
 .footer__icon {
   display: flex;
   justify-content: space-between;
+  width: 50%;
+  margin: 0;
   padding: 16px 0;
 }
 .footer__icon--size {
-  width: 2em;
+  height: 2em;
+}
+.footer__content {
+  width: 65%;
 }
 .footer__p {
   padding: 13px 0;
@@ -211,4 +258,6 @@ body {
 }
 .footer__copy-right {
   margin: 3rem 0 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=bio.css.map */

@@ -1,6 +1,8 @@
+@use "../utilities/font" as *;
 // colors
 $transparent-black: #323232;
 $silver: #afafaf;
+$opacity: #323232;
 $white: #ffffff;
 // secundary colors
 $dark-black: #000000;
@@ -13,3 +15,7 @@ $mobile-size-mx: 767px;
 $tablet-size-m: 768px;
 $tablet-size-mx: 1279px;
 $desktop-size-m: 1280px;
+
+$font-bold: "avenir-bold", sans-serif;
+$font-demi: "avenir-demi", sans-serif;
+$font-regular: "avenir-regular", sans-serif;
