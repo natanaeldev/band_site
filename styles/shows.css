@@ -395,7 +395,7 @@ span {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/Images/hero-bio.jpg);
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -404,7 +404,7 @@ span {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero {
-    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/Images/hero-bio.jpg);
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-bio.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -414,13 +414,12 @@ span {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../assets/Images/hero-bio.jpg);
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-bio.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    font-family: "avenir-bold", sans-serif;
   }
 }
 .hero__wrapper {
@@ -455,138 +454,5 @@ span {
   .hero__title {
     color: #ffffff;
     font-size: 60px;
-  }
-}
-
-.about {
-  padding: 16px;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .about {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 36px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 100px;
-  }
-}
-.about__title {
-  font-size: 25px;
-  font-family: "avenir-bold", sans-serif;
-  padding-top: 20px;
-  padding-bottom: 16px;
-}
-@media screen and (min-width: 1280px) {
-  .about__title {
-    font-size: 40px;
-    font-family: "avenir-bold", sans-serif;
-    color: #323232;
-    font-weight: 600;
-    padding-top: 20px;
-    padding-bottom: 25px;
-  }
-}
-.about__subtitle {
-  font-family: "avenir-bold", sans-serif;
-  margin: 16px;
-}
-@media screen and (min-width: 1280px) {
-  .about__subtitle {
-    margin: 16px;
-    font-family: "avenir-bold", sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .about__wrapper {
-    padding: 0 32px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about__wrapper {
-    padding: 0 32px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .about__wrapper--p {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about__wrapper--p {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    font-size: 14px;
-    line-height: 32px;
-    font-family: "avenir-regular", sans-serif;
-  }
-}
-.about__img {
-  width: 100%;
-}
-@media screen and (min-width: 1280px) {
-  .about__img {
-    width: 100%;
-  }
-}
-.about__p {
-  margin: 1rem;
-}
-@media screen and (min-width: 1280px) {
-  .about__p--quote {
-    margin-top: 20px;
-    width: 80%;
-    color: #323232;
-    font-weight: 600;
-    font-size: 25px;
-    margin-bottom: 36px;
-  }
-}
-
-.gallery__img {
-  width: 100%;
-  margin: 10px 0;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .gallery__img {
-    width: 200px;
-    padding-bottom: 10px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .gallery__img {
-    width: 290px;
-    padding-bottom: 5px;
-  }
-}
-.gallery__title {
-  padding-top: 20px;
-  padding-bottom: 16px;
-  font-family: "avenir-bold", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .gallery__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .gallery__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 85%;
   }
 }/*# sourceMappingURL=shows.css.map */

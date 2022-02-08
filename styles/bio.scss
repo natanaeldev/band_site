@@ -1,3 +1,162 @@
 @use "./partials/global";
-@use "./partials/components/nav";
-@use "./partials/components/main-content";
+@use "./partials/utilities/var" as *;
+@use "./partials/utilities/mixin" as *;
+@use "./partials/components/nav" as *;
+@use "./partials/components/footer" as *;
+.hero {
+  @include hero("../../../assets/Images/hero-bio.jpg", 50vh, 100%);
+
+  @include tablet {
+    @include hero("../../../assets/Images/hero-bio.jpg", 100vh, 100%);
+  }
+  @include desktop {
+    @include hero("../../../assets/Images/hero-bio.jpg", 100vh, 100%);
+  }
+  &__wrapper {
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include tablet {
+      padding: 0 5rem;
+      height: 100%;
+    }
+    @include desktop {
+      padding: 0 10rem;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-size: 24px;
+    @include tablet {
+      color: $white;
+      font-size: 50px;
+    }
+    @include desktop {
+      color: $white;
+      font-size: 60px;
+    }
+  }
+}
+
+.about {
+  padding: 16px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 36px;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+  }
+  &__title {
+    font-size: 25px;
+    font-family: $font-bold;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    @include desktop {
+      font-size: 40px;
+      font-family: $font-bold;
+      color: $transparent-black;
+      font-weight: 600;
+      padding-top: 20px;
+      padding-bottom: 25px;
+    }
+  }
+  &__subtitle {
+    font-family: $font-bold;
+    margin: 16px;
+    @include desktop {
+      margin: 16px;
+      font-family: $font-bold;
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+  &__wrapper {
+    @include tablet {
+      padding: 0 32px;
+    }
+    @include desktop {
+      padding: 0 32px;
+    }
+    &--p {
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-size: 14px;
+        line-height: 32px;
+        font-family: $font-regular;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &__p {
+    margin: 1rem;
+    &--quote {
+      @include desktop {
+        margin-top: 20px;
+        width: 80%;
+        color: $transparent-black;
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 36px;
+      }
+    }
+  }
+}
+
+.gallery {
+  // @include desktop {
+
+  // }
+  &__img {
+    width: 100%;
+    margin: 10px 0;
+    @include tablet {
+      width: 200px;
+      padding-bottom: 10px;
+    }
+    @include desktop {
+      width: 290px;
+      padding-bottom: 5px;
+    }
+  }
+  &__title {
+    padding-top: 20px;
+    padding-bottom: 16px;
+    font-family: $font-bold;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 85%;
+    }
+  }
+}

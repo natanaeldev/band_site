@@ -16,3 +16,13 @@
     @content;
   }
 }
+
+@mixin hero($url, $height, $width) {
+  background-image: linear-gradient(rgba($opacity, 50%), rgba($opacity, 50%)),
+    url($url);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: $height;
+  width: $width;
+}
