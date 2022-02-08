@@ -27,12 +27,13 @@
       </nav>
     </header>
     <main class="main-content">
-      <div class="hero">
+      <div class="main-content__wrapper">
+        <section class="hero">
         <div class="hero__wrapper">
           <h1 class="hero__title">The Bees Knees</h1>
         </div>
-      </div>
-      <div class="about">
+      </section>
+      <section class="about">
         <h1 class="about__title">About the Musicians</h1>
         <div class="about__wrapper">
           <img class="about__img" src="./assets/Images/band.jpg" alt="band image" />
@@ -64,10 +65,11 @@
             performances on stage. Looking forward to touring in the future, The
             Bees Knees are currently recording their second studio album,
             looking to be released in late 2021.
+            </p>
         </div>
-          </p>
         </div>
-        <div class="gallery">
+      </section>
+       <section class="gallery">
           <h1 class="gallery__title">Photo Gallery</h1>
           <div class="gallery__wrapper">
             <img
@@ -116,7 +118,17 @@
             alt="photo"
           />
           </div>
-        </div>
+        </section>
+      <section class="conversection">
+        <h1>Join the Conversetion</h1>
+        <form action="">
+          <label for="name">NAME</label>
+          <input type="text" placeholder="Enter your Name">
+          <label for="name">Comment</label>
+          <textarea name="comments" id="userForm" cols="30" rows="10">Enter your comment here</textarea>
+        </form>
+        
+      </section>
       </div>
     </main>
     <footer class="footer">

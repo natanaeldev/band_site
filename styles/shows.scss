@@ -5,13 +5,13 @@
 @use "./partials/components/footer";
 
 .hero {
-  @include hero("../../../assets/Images/hero-bio.jpg", 50vh, 100%);
+  @include hero("../../../assets/Images/hero-shows.jpg", 50vh, 100%);
 
   @include tablet {
-    @include hero("../../../assets/Images/hero-bio.jpg", 100vh, 100%);
+    @include hero("../../../assets/Images/hero-shows.jpg", 100vh, 100%);
   }
   @include desktop {
-    @include hero("../../../assets/Images/hero-bio.jpg", 100vh, 100%);
+    @include hero("../../../assets/Images/hero-shows.jpg", 100vh, 100%);
   }
   &__wrapper {
     padding: 0 1rem;

@@ -1,1 +1,1 @@
-alert("Iam the index page");
+// alert("Iam the index page");

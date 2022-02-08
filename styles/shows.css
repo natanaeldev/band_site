@@ -395,7 +395,7 @@ span {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-bio.jpg");
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -404,7 +404,7 @@ span {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero {
-    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-bio.jpg");
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-shows.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -414,7 +414,7 @@ span {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-bio.jpg");
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-shows.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
