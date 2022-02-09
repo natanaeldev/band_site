@@ -1,1 +1,1 @@
-alert("Iam the show page");
+// alert("Iam the show page");
