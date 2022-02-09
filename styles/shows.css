@@ -455,4 +455,43 @@ span {
     color: #ffffff;
     font-size: 60px;
   }
+}
+
+.shows__line {
+  margin: 10px 0;
+  border-bottom: 1px solid #afafaf;
+  width: 350px;
+}
+.shows__title {
+  font-family: "avenir-demi", sans-serif;
+  font-family: 700;
+  font-size: 28px;
+  margin: 2rem 0;
+  padding: 0 16px;
+}
+.shows__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+}
+.shows__row {
+  margin: 0.55rem 0;
+}
+.shows__row--span {
+  color: #e1e1e1;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.shows__button {
+  height: 40px;
+  width: 90%;
+  border-radius: 4px;
+  color: #ffffff;
+  border: none;
+  background-color: #323232;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "avenir-bold", sans-serif;
+  font-weight: 700;
 }/*# sourceMappingURL=shows.css.map */

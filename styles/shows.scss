@@ -41,3 +41,35 @@
     }
   }
 }
+
+.shows {
+  &__line {
+    margin: 10px 0;
+    border-bottom: 1px solid $silver;
+    width: 350px;
+  }
+  &__title {
+    font-family: $font-demi;
+    font-family: 700;
+    font-size: 28px;
+    margin: 2rem 0;
+    padding: 0 16px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+  }
+  &__row {
+    margin: 0.55rem 0;
+    &--span {
+      color: $mercury;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+  &__button {
+    @include button(15px, 90%);
+  }
+}

@@ -608,6 +608,7 @@ span {
   width: 100%;
   padding: 5px;
   border: 1px solid #e1e1e1;
+  font-family: "avenir-demi", sans-serif;
   border-radius: 4px 4px 4px 4px;
 }
 .conversaction__form--label {

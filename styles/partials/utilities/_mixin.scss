@@ -27,9 +27,9 @@
   width: $width;
 }
 
-@mixin button($size) {
+@mixin button($size, $width) {
   height: 40px;
-  width: 100%;
+  width: $width;
   border-radius: 4px;
   color: $white;
   border: none;
