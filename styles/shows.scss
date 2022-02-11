@@ -5,7 +5,7 @@
 @use "./partials/components/footer";
 
 .hero {
-  @include hero("../../../assets/Images/hero-shows.jpg", 50vh, 100%);
+  @include hero("../../../assets/Images/hero-shows.jpg", 100vh, 100%);
 
   @include tablet {
     @include hero("../../../assets/Images/hero-shows.jpg", 100vh, 100%);
@@ -14,16 +14,18 @@
     @include hero("../../../assets/Images/hero-shows.jpg", 100vh, 100%);
   }
   &__wrapper {
-    padding: 0 1rem;
+    padding: 3rem 2rem;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+
     @include tablet {
-      padding: 0 5rem;
+      padding: 3rem 5rem;
       height: 100%;
     }
     @include desktop {
-      padding: 0 10rem;
+      padding: 3rem 10rem;
       height: 100%;
     }
   }
@@ -31,6 +33,8 @@
   &__title {
     color: $white;
     font-size: 24px;
+    padding: 1rem 0;
+
     @include tablet {
       color: $white;
       font-size: 50px;
@@ -39,11 +43,20 @@
       color: $white;
       font-size: 60px;
     }
+    &--p {
+      color: $white;
+    }
   }
 }
 
 .shows {
   padding: 16px;
+  @include tablet {
+    padding: 30px;
+  }
+  @include desktop {
+    padding: 30px;
+  }
 
   &__title {
     font-family: $font-demi;
@@ -53,16 +66,55 @@
     padding: 0 16px;
   }
 
+  &__wrapper {
+    @include desktop {
+      // background-color: black;
+      padding-left: 10rem;
+    }
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
     list-style: none;
     border-bottom: 3px solid $silver;
     margin: 1rem 0;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style: none;
+      align-items: center;
+      border-bottom: 3px solid $silver;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style: none;
+      align-items: center;
+      border-bottom: 3px solid $silver;
+    }
+
+    &--title {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: space-between;
+      width: 60%;
+      margin-left: 1rem;
+    }
   }
 
   &__item {
     margin: 1rem 0;
+    @include tablet {
+      margin-right: 1rem;
+    }
+    @include desktop {
+      margin-right: 1rem;
+    }
     &--title {
       color: $silver;
       font-size: 0.85rem;
@@ -76,5 +128,30 @@
 
   &__button {
     @include button(15px, 90%);
+    // margin-bottom: 1rem;
+    @include tablet {
+      @include button(15px, 20%);
+      margin-left: 1rem;
+    }
+    @include desktop {
+      @include button(15px, 20%);
+      margin-left: 1rem;
+    }
+  }
+}
+
+.iframe {
+  width: 100%;
+}
+
+.phone-hidden {
+  @include mobile {
+    display: none;
+  }
+}
+
+.hidden {
+  @include tablet {
+    display: none;
   }
 }

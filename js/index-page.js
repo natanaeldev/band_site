@@ -1,6 +1,7 @@
 let form = document.querySelector("#conversaction__form");
 let commentsWrapper = document.querySelector(".comments__wrapper");
 let currentDate = new Date().toLocaleDateString();
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let name = e.target.name.value;
