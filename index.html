@@ -7,7 +7,7 @@
 
     <!-- css style -->
     <link rel="stylesheet" href="./styles/bio.css" />
-    <script src="./js/index-page.js"></script>
+
     <title>Band Site</title>
   </head>
   <body>
@@ -130,10 +130,11 @@
           <h1 class="conversaction__title">Join the Conversetion</h1>
           <div class="conversaction__wrapper">
             <img src="./assets/Images/Mohan-muruge.jpg" alt="" class="avatar" />
-            <form action="" class="conversaction__form">
+            <form action="" method="post" id="conversaction__form">
               <label class="conversaction__form--label" for="name">NAME</label>
               <input
                 class="conversaction__form--field"
+                name="name"
                 type="text"
                 placeholder="Enter your Name"
               />
@@ -147,12 +148,31 @@
                 type="text"
               ></textarea>
 
-              <input
-                class="conversaction__form--button"
-                type="button"
-                value="COMMENT"
-              />
+              <button class="conversaction__form--button">COMMENT</button>
             </form>
+          </div>
+          <div class="comments__wrapper">
+            <div class="comment">
+              <div class="comment__header">
+                <img
+                  src="./assets/Images/Mohan-muruge.jpg"
+                  alt=""
+                  class="avatar1 space"
+                />
+                <ul class="comment__ul">
+                  <li class="comment__li">Connor Walton</li>
+                  <li>02/17/2021</li>
+                </ul>
+              </div>
+              <div class="comment__p">
+                <p>
+                  This is art. This is inexplicable magic expressed in the
+                  purest way, everything that makes up this majestic work
+                  deserves reverence. Let us appreciate this for what it is and
+                  what it contains.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -232,5 +252,6 @@
         Copyright The Bees Knees &copy 2021 All Rights Reserved
       </p>
     </footer>
+    <script src="./js/index-page.js"></script>
   </body>
 </html>

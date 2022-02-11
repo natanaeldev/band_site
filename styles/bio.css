@@ -638,9 +638,48 @@ span {
   font-size: 24px;
 }
 
+.comment {
+  border-top: 1px solid #afafaf;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.comment__header {
+  display: flex;
+  align-items: center;
+}
+.comment__ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 23px;
+  list-style: none;
+  width: 100%;
+}
+.comment__li {
+  margin-right: 3.5rem;
+}
+.comment__p {
+  display: flex;
+  margin-left: 4rem;
+  text-align: justify;
+  max-width: 250px;
+}
+
+.space {
+  left: 5px;
+}
+
 .avatar {
   width: 40px;
   height: 40px;
   margin: 20px 20px;
+  border-radius: 50%;
+}
+
+.avatar1 {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }/*# sourceMappingURL=bio.css.map */

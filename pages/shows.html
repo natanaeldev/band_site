@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/shows.css" />
-    <script src="../js/build-shows-page.js"></script>
     <title>Band Site</title>
   </head>
   <body>
@@ -30,7 +29,7 @@
       <section class="hero">
         <div class="hero__wrapper">
           <h1 class="hero__title">The Bees Knees</h1>
-          <iframe
+          <!-- <iframe
             width="100%"
             height="166"
             scrolling="no"
@@ -67,83 +66,24 @@
               style="color: #cccccc; text-decoration: none"
               >In the End</a
             >
-          </div>
+          </div> -->
         </div>
       </section>
       <section class="shows">
         <h1 class="shows__title">Shows</h1>
         <div class="shows__wrapper">
-          <div class="shows__row">
-            <div class="shows__row--span">DATE</div>
-            <div class="shows__row--p">Mon Sept 06</div>
-          </div>
-          <div class="shows__row">
-            <div class="shows__row--span">VENUE</div>
-            <div class="shows__row--p">Ronald Lane</div>
-          </div>
-          <div class="shows__row">
-            <div class="shows__row--span">LOCATION</div>
-            <div class="shows__row--p">San Francisco, CA</div>
-          </div>
-          <div class="shows__button-box">
-            <input class="shows__button" type="button" value="BUY TICKET" />
-          </div>
+          <ul class="shows__list">
+            <li class="shows__item--title">Date</li>
+            <li class="shows__item">Tue Sept 21 2021</li>
+            <li class="shows__item--title">VENUE</li>
+            <li class="shows__item">Pier 3 East</li>
+            <li class="shows__item--title">LOCATION</li>
+            <li class="shows__item">San Francisco, CA</li>
+            <li class="shows__item">
+              <button class="shows__button">BUY TICKETS</button>
+            </li>
+          </ul>
         </div>
-        <div class="shows__line"></div>
-        <div class="shows__wrapper">
-          <div class="shows__row">
-            <div class="shows__row--span">DATE</div>
-            <div class="shows__row--p">Mon Sept 06</div>
-          </div>
-          <div class="shows__row">
-            <div class="shows__row--span">VENUE</div>
-            <div class="shows__row--p">Ronald Lane</div>
-          </div>
-          <div class="shows__row">
-            <div class="shows__row--span">LOCATION</div>
-            <div class="shows__row--p">San Francisco, CA</div>
-          </div>
-          <div class="shows__button-box">
-            <input class="shows__button" type="button" value="BUY TICKET" />
-          </div>
-        </div>
-        <div class="shows__line"></div>
-        <div class="shows__wrapper">
-          <div class="shows__row">
-            <div class="shows__row--span">DATE</div>
-            <div class="shows__row--p">Mon Sept 06</div>
-          </div>
-          <div class="shows__row">
-            <div class="shows__row--span">VENUE</div>
-            <div class="shows__row--p">Ronald Lane</div>
-          </div>
-          <div class="shows__row">
-            <div class="shows__row--span">LOCATION</div>
-            <div class="shows__row--p">San Francisco, CA</div>
-          </div>
-          <div class="shows__button-box">
-            <input class="shows__button" type="button" value="BUY TICKET" />
-          </div>
-        </div>
-        <div class="shows__line"></div>
-        <div class="shows__wrapper">
-          <div class="shows__row">
-            <div class="shows__row--span">DATE</div>
-            <div class="shows__row--p">Mon Sept 06</div>
-          </div>
-          <div class="shows__row">
-            <div class="shows__row--span">VENUE</div>
-            <div class="shows__row--p">Ronald Lane</div>
-          </div>
-          <div class="shows__row">
-            <div class="shows__row--span">LOCATION</div>
-            <div class="shows__row--p">San Francisco, CA</div>
-          </div>
-          <div class="shows__button-box">
-            <input class="shows__button" type="button" value="BUY TICKET" />
-          </div>
-        </div>
-        <div class="shows__line"></div>
       </section>
     </main>
     <footer class="footer">
@@ -221,5 +161,6 @@
         Copyright The Bees Knees &copy 2021 All Rights Reserved
       </p>
     </footer>
+    <script src="../js/build-shows-page.js"></script>
   </body>
 </html>
