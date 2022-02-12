@@ -28,11 +28,11 @@ const showsDates = [
 
 // Creating the div for the shows table
 // let headers = ["DATE", "VENUE", "LOCATION"];
-let shows = document.querySelector(".shows");
 
 // console.log(shows);
 
 function displayShows(show) {
+  let shows = document.querySelector(".shows");
   let showsWrapper = document.createElement("div");
   showsWrapper.classList.add("shows__wrapper");
   let showList = document.createElement("ul");
@@ -54,6 +54,7 @@ function displayShows(show) {
   let showItemLocation = document.createElement("li");
   let showItemButton = document.createElement("li");
   let showDisplayButton = document.createElement("button");
+  let showButton = document.createElement("button");
   showDisplayButton.innerText = "BUY TICKETS";
   showDisplayButton.classList.add("shows__button");
   showDisplayButton.classList.add("phone-hidden");
@@ -64,7 +65,6 @@ function displayShows(show) {
   showItemLocation.classList.add("shows__item");
   showItemButton.classList.add("shows__item");
 
-  let showButton = document.createElement("button");
   showButton.innerText = "BUY TICKETS";
   showButton.classList.add("shows__button");
 
@@ -82,6 +82,10 @@ function displayShows(show) {
   showList.appendChild(showDisplayButton);
   showButton.classList.add("hidden");
   showItemButton.appendChild(showButton);
+
+  showList.addEventListener("click", () => {
+    showList.classList.add("active");
+  });
 }
 
 showsDates.map((show) => {

@@ -14,7 +14,7 @@
     @include hero("../../../assets/Images/hero-shows.jpg", 100vh, 100%);
   }
   &__wrapper {
-    padding: 3rem 2rem;
+    padding: 3rem 4rem;
     height: 100%;
     display: flex;
     align-items: flex-start;
@@ -25,7 +25,7 @@
       height: 100%;
     }
     @include desktop {
-      padding: 3rem 10rem;
+      padding: 10rem 10rem;
       height: 100%;
     }
   }
@@ -40,6 +40,7 @@
       font-size: 50px;
     }
     @include desktop {
+      margin: 2rem 0;
       color: $white;
       font-size: 60px;
     }
@@ -50,7 +51,16 @@
 }
 
 .shows {
-  padding: 16px;
+  padding: 34px;
+  &__wrapper {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+
+      margin-left: 280px;
+    }
+  }
+
   @include tablet {
     padding: 30px;
   }
@@ -66,19 +76,15 @@
     padding: 0 16px;
   }
 
-  &__wrapper {
-    @include desktop {
-      // background-color: black;
-      padding-left: 10rem;
-    }
-  }
-
   &__list {
+    &:hover {
+      background-color: $weird-white;
+    }
     display: flex;
     flex-direction: column;
     list-style: none;
     border-bottom: 3px solid $silver;
-    margin: 1rem 0;
+    // margin: 1rem 0;
     @include tablet {
       display: flex;
       flex-direction: row;
@@ -95,6 +101,8 @@
       list-style: none;
       align-items: center;
       border-bottom: 3px solid $silver;
+      font-size: 14px;
+      padding: 24px 88px;
     }
 
     &--title {
@@ -104,6 +112,10 @@
       justify-content: space-between;
       width: 60%;
       margin-left: 1rem;
+      @include desktop {
+        width: 50%;
+        margin-left: 4rem;
+      }
     }
   }
 
@@ -119,11 +131,6 @@
       color: $silver;
       font-size: 0.85rem;
     }
-  }
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
 
   &__button {
@@ -154,4 +161,9 @@
   @include tablet {
     display: none;
   }
+}
+
+.active:active {
+  background-color: $mercury;
+  cursor: pointer;
 }
