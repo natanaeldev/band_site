@@ -1,4 +1,5 @@
 @use "../partials/utilities/font";
+@use "../partials/utilities/mixin";
 /* Reset */
 html,
 body,
@@ -90,5 +91,6 @@ video {
 }
 
 body {
-  font-family: "demi-regular", sans-serif;
+  font-family: "avenir", sans-serif;
+  font-weight: 400;
 }

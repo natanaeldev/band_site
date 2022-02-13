@@ -1,4 +1,4 @@
-const comments = [
+const commentsArray = [
   {
     name: "Connor Walton",
     date: "02 / 17 / 2021",
@@ -19,7 +19,7 @@ const comments = [
   },
 ];
 
-let form = document.querySelector("#conversaction__form");
+let form = document.querySelector("#conversation__form");
 let commentsWrapper = document.querySelector(".comments__wrapper");
 let currentDate = new Date().toLocaleDateString();
 
@@ -36,10 +36,11 @@ function displayComment(comment) {
   let names = document.createElement("li");
   names.classList.add("comment__li");
   let Dates = document.createElement("li");
+  Dates.classList.add("comment__li--date");
   let paragraph = document.createElement("p");
   paragraph.classList.add("comment__p");
-  commentsWrapper.prepend(comments);
   commentsWrapper.classList.add("comments__wrapper");
+  commentsWrapper.prepend(comments);
   comments.appendChild(headerDiv);
   headerDiv.appendChild(img);
   headerDiv.appendChild(commentUl);
@@ -48,13 +49,16 @@ function displayComment(comment) {
   comments.appendChild(paragraph).innerText = comment.comment;
 }
 
-comments.forEach((comment) => {
+commentsArray.forEach((comment) => {
   displayComment(comment);
 });
+
+// this is the code for the button which is going to submit the comments.
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let name = e.target.name.value;
+
   let comment = e.target.comments.value;
   let comments = document.createElement("div");
   comments.classList.add("comment");
@@ -68,6 +72,7 @@ form.addEventListener("submit", (e) => {
   let names = document.createElement("li");
   names.classList.add("comment__li");
   let Dates = document.createElement("li");
+  Dates.classList.add("comment__li--date");
   let paragraph = document.createElement("p");
   paragraph.classList.add("comment__p");
   commentsWrapper.prepend(comments);
