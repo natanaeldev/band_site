@@ -8,67 +8,89 @@ let currentDate = new Date().toLocaleDateString();
 axios.get(`${url}${apiKey}`).then((comment) => {
   commentsArray.push(comment.data);
   commentsArray.forEach((comment) => {
-    displayComment(comment);
+    comment.forEach((data) => {
+      console.log(data);
+      displayComment(data);
+    });
   });
 });
 
 function displayComment(comment) {
-  comment.forEach((comment) => {
-    let comments = document.createElement("div");
-    comments.classList.add("comment");
+  console.log(comment);
+  let comments = document.createElement("div");
+  comments.classList.add("comment");
 
-    let headerDiv = document.createElement("div");
-    headerDiv.classList.add("comment__header");
+  let headerDiv = document.createElement("div");
+  headerDiv.classList.add("comment__header");
 
-    let img = document.createElement("img");
-    img.setAttribute("src", "./assets/Images/Mohan-muruge.jpg");
-    img.classList.add("avatar1");
+  let img = document.createElement("img");
+  img.setAttribute("src", "./assets/Images/Mohan-muruge.jpg");
+  img.classList.add("avatar1");
 
-    let commentUl = document.createElement("ul");
-    commentUl.classList.add("comment__ul");
+  let commentUl = document.createElement("ul");
+  commentUl.classList.add("comment__ul");
 
-    let names = document.createElement("li");
-    names.classList.add("comment__li");
+  let names = document.createElement("li");
+  names.classList.add("comment__li");
 
-    let Dates = document.createElement("li");
-    Dates.classList.add("comment__li--date");
+  let Dates = document.createElement("li");
+  Dates.classList.add("comment__li--date");
 
-    let paragraph = document.createElement("p");
-    paragraph.classList.add("comment__p");
+  let paragraph = document.createElement("p");
+  paragraph.classList.add("comment__p");
 
-    commentsWrapper.classList.add("comments__wrapper");
+  commentsWrapper.classList.add("comments__wrapper");
 
-    let time = new Date(comment.timestamp);
+  let time = new Date(comment.timestamp);
 
-    commentsWrapper.prepend(comments);
-    comments.appendChild(headerDiv);
+  commentsWrapper.prepend(comments);
+  comments.appendChild(headerDiv);
 
-    headerDiv.appendChild(img);
-    headerDiv.appendChild(commentUl);
+  headerDiv.appendChild(img);
+  headerDiv.appendChild(commentUl);
 
-    commentUl.appendChild(names).innerText = comment.name;
-    commentUl.appendChild(Dates).innerText = time.toUTCString();
+  commentUl.appendChild(names).innerText = comment.name;
+  commentUl.appendChild(Dates).innerText = time.toUTCString();
 
-    comments.appendChild(paragraph).innerText = comment.comment;
-  });
+  comments.appendChild(paragraph).innerText = comment.comment;
 }
 
 // this is the code for the button which is going to submit the comments.
-function handleSubmit(e) {
+let handleSubmit = (e) => {
   e.preventDefault();
-
   let name = e.target.name.value;
   let comment = e.target.comments.value;
+  let newComment = {
+    name: name,
+    comment: comment,
+  };
 
   if (name && comment) {
-    commentsWrapper.innerHTML = "";
-
-    axios.post;
+    // commentsWrapper.innerText = "";
+    axios
+      .post(`${url}${apiKey}`, newComment)
+      .then((response) => {
+        axios
+          .get(`${url}${apiKey}`)
+          .then((response) => {
+            console.log("Iam working");
+            let comments = response.data;
+            commentsArray.push(comments);
+            comments.forEach((comment) => {
+              console.log("Iam working1");
+              displayComment(comment);
+            });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    form.reset();
   }
-  commentsArray.forEach((comment) => {
-    displayComment(comment);
-  });
-}
+};
 
 form.addEventListener("submit", handleSubmit);
 
