@@ -43,7 +43,16 @@ let displayComment = (comment) => {
 
   commentsWrapper.classList.add("comments__wrapper");
 
-  let time = new Date(comment.timestamp);
+  let date = (date) => {
+    let dates = new Date(Number(date));
+    dates.toISOString();
+    let day = dates.getDay();
+    let month = dates.getMonth();
+    let year = dates.getFullYear();
+    let fullDate = `${month} / ${day} / ${year}`;
+
+    return fullDate;
+  };
 
   commentsWrapper.prepend(comments);
   comments.appendChild(headerDiv);
@@ -52,7 +61,7 @@ let displayComment = (comment) => {
   headerDiv.appendChild(commentUl);
 
   commentUl.appendChild(names).innerText = comment.name;
-  commentUl.appendChild(Dates).innerText = time.toUTCString();
+  commentUl.appendChild(Dates).innerText = date(comment.timestamp);
 
   comments.appendChild(paragraph).innerText = comment.comment;
 };

@@ -61,12 +61,12 @@
       font-weight: 600;
       width: 100%;
     }
-    &--p {
-      color: $white;
-      font-weight: 500;
-      font-size: 18px;
-      white-space: pre-line;
-    }
+  }
+  &__title-p {
+    color: $white;
+    font-weight: 500;
+    font-size: 18px;
+    white-space: pre-line;
   }
 }
 
@@ -125,18 +125,17 @@
       font-size: 14px;
       padding: 24px 28px;
     }
-
-    &--title {
-      display: flex;
-      flex-direction: row;
-      list-style: none;
-      justify-content: space-between;
-      width: 55%;
-      margin-left: 1rem;
-      @include desktop {
-        width: 50%;
-        margin-left: 5rem;
-      }
+  }
+  &__list-title {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 55%;
+    margin-left: 1rem;
+    @include desktop {
+      width: 50%;
+      margin-left: 5rem;
     }
   }
 
@@ -153,10 +152,11 @@
     @include desktop {
       font-size: 14px;
     }
-    &--title {
-      color: $silver;
-      font-size: 0.85rem;
-    }
+  }
+
+  &__item-title {
+    color: $silver;
+    font-size: 0.85rem;
   }
 
   &__button {

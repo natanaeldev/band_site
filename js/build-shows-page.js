@@ -22,11 +22,11 @@ let displayShows = (show) => {
   let showItemtDate = document.createElement("li");
   let showItemtVenue = document.createElement("li");
   let showItemtLocation = document.createElement("li");
-  showItemtDate.classList.add("shows__item--title");
+  showItemtDate.classList.add("shows__item-title");
   showItemtDate.classList.add("hidden");
-  showItemtVenue.classList.add("shows__item--title");
+  showItemtVenue.classList.add("shows__item-title");
   showItemtVenue.classList.add("hidden");
-  showItemtLocation.classList.add("shows__item--title");
+  showItemtLocation.classList.add("shows__item-title");
   showItemtLocation.classList.add("hidden");
 
   //creating the li for the content
@@ -53,16 +53,21 @@ let displayShows = (show) => {
 
   //applying information to the list.
 
-  // let date = () =>{
-  //  let  date =  new Date(Number(show.date));
+  let date = (date) => {
+    let dates = new Date(Number(date));
+    let day = dates.getDay();
+    let month = dates.getMonth();
+    let year = dates.getFullYear();
+    let fullDate = `${month}/${day}/${year}`;
 
-  // }
+    return fullDate;
+  };
 
-  console.log(date);
-  date.toLocaleString();
+  // // console.log(date);
+  // date.toLocaleString();
   showsWrapper.appendChild(showList);
   showList.appendChild(showItemtDate).innerText = "DATE";
-  showList.appendChild(showItemDate).innerText = date;
+  showList.appendChild(showItemDate).innerText = date(show.date);
   showList.appendChild(showItemtVenue).innerText = "VENUE";
   showList.appendChild(showItemVenue).innerText = show.place;
   showList.appendChild(showItemtLocation).innerText = "LOCATION";

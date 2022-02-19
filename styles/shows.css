@@ -508,7 +508,7 @@ span {
     width: 100%;
   }
 }
-.hero__title--p {
+.hero__title-p {
   color: #ffffff;
   font-weight: 500;
   font-size: 18px;
@@ -572,7 +572,7 @@ span {
     padding: 24px 28px;
   }
 }
-.shows__list--title {
+.shows__list-title {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -581,7 +581,7 @@ span {
   margin-left: 1rem;
 }
 @media screen and (min-width: 1280px) {
-  .shows__list--title {
+  .shows__list-title {
     width: 50%;
     margin-left: 5rem;
   }
@@ -606,7 +606,7 @@ span {
     font-size: 14px;
   }
 }
-.shows__item--title {
+.shows__item-title {
   color: #afafaf;
   font-size: 0.85rem;
 }
