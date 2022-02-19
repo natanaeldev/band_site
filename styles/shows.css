@@ -372,7 +372,7 @@ body {
     font-size: 15px;
   }
 }
-.footer__detail--pa {
+.footer__detail-pa {
   color: #e1e1e1;
 }
 @media screen and (max-width: 767px) {

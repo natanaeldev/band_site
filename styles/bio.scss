@@ -100,26 +100,21 @@
       font-size: 25px;
     }
   }
-  &__wrapper {
+
+  &__wrapper-p {
     @include tablet {
+      display: flex;
+      flex-direction: row;
       padding: 0 32px;
     }
     @include desktop {
+      display: flex;
       padding: 0 32px;
-    }
-    &--p {
-      @include tablet {
-        display: flex;
-        flex-direction: row;
-      }
-      @include desktop {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        font-size: 14px;
-        line-height: 32px;
-        font-family: "avenir", sans-serif;
-      }
+      flex-direction: row;
+      flex-wrap: nowrap;
+      font-size: 14px;
+      line-height: 32px;
+      font-family: "avenir", sans-serif;
     }
   }
 
@@ -161,38 +156,38 @@
       font-size: 18px;
       line-height: 28px;
     }
-    &--quote {
+  }
+  &__p-quote {
+    margin: 15px 0 0 0;
+    overflow-wrap: break-word;
+    color: $transparent-black;
+    text-align: justify;
+    word-wrap: break-word;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 28px;
+    margin-bottom: 36px;
+    @include tablet {
       margin: 15px 0 0 0;
       overflow-wrap: break-word;
       color: $transparent-black;
       text-align: justify;
       word-wrap: break-word;
       font-weight: 600;
-      font-size: 17px;
-      line-height: 28px;
+      font-size: 25px;
+      line-height: 30px;
       margin-bottom: 36px;
-      @include tablet {
-        margin: 15px 0 0 0;
-        overflow-wrap: break-word;
-        color: $transparent-black;
-        text-align: justify;
-        word-wrap: break-word;
-        font-weight: 600;
-        font-size: 25px;
-        line-height: 30px;
-        margin-bottom: 36px;
-      }
-      @include desktop {
-        margin: 30px 0 0 0;
-        overflow-wrap: break-word;
-        color: $transparent-black;
-        text-align: justify;
-        word-wrap: break-word;
-        font-weight: 600;
-        font-size: 25px;
-        line-height: 30px;
-        margin-bottom: 36px;
-      }
+    }
+    @include desktop {
+      margin: 30px 0 0 0;
+      overflow-wrap: break-word;
+      color: $transparent-black;
+      text-align: justify;
+      word-wrap: break-word;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 36px;
     }
   }
 }
@@ -272,8 +267,20 @@
       justify-content: center;
     }
   }
-  &__form {
-    &--field {
+  &__form-field {
+    font-weight: 600;
+
+    color: $transparent-black;
+    min-height: 36px;
+    width: 95%;
+    background-color: $weird-white;
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid $mercury;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 15px;
+
+    @include tablet {
       font-weight: 600;
 
       color: $transparent-black;
@@ -285,38 +292,62 @@
       border: 1px solid $mercury;
       border-radius: 4px 4px 4px 4px;
       font-size: 15px;
-
-      @include tablet {
-        font-weight: 600;
-
-        color: $transparent-black;
-        min-height: 36px;
-        width: 95%;
-        background-color: $weird-white;
-        margin-bottom: 16px;
-        padding: 10px;
-        border: 1px solid $mercury;
-        border-radius: 4px 4px 4px 4px;
-        font-size: 15px;
-      }
-
-      @include desktop {
-        font-weight: 600;
-
-        color: $transparent-black;
-        min-height: 36px;
-        width: 95%;
-        background-color: $weird-white;
-        margin-bottom: 16px;
-        padding: 10px;
-        border: 1px solid $mercury;
-        border-radius: 4px 4px 4px 4px;
-        font-size: 15px;
-      }
     }
-    &--comments {
+
+    @include desktop {
+      font-weight: 600;
+
+      color: $transparent-black;
+      min-height: 36px;
+      width: 95%;
+      background-color: $weird-white;
+      margin-bottom: 16px;
+      padding: 10px;
+      border: 1px solid $mercury;
+      border-radius: 4px 4px 4px 4px;
+      font-size: 15px;
+    }
+  }
+
+  margin: 15px 0;
+  &__form-button {
+    @include button(15px, 100%);
+    @include desktop {
+      @include button(15px, 35%);
+      position: relative;
+      left: 25rem;
+      margin: 15px 0;
+      margin: 15px 0;
+    }
+    @include tablet {
+      @include button(15px, 30%);
+      position: relative;
+      left: 26.5rem;
+      margin: 15px 0;
+      margin: 15px 0;
+    }
+  }
+  &__form-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 5px;
+    color: $silver;
+  }
+  &__form-comments {
+    min-height: 100px;
+    width: 91%;
+    background-color: $weird-white;
+    padding: 10px;
+    border: 1px solid $mercury;
+    font-size: 15px;
+    font-family: "avenir", sans-serif;
+    color: $transparent-black;
+    font-weight: 600;
+    border-radius: 4px 4px 4px 4px;
+    @include tablet {
       min-height: 100px;
-      width: 91%;
+      width: 95%;
       background-color: $weird-white;
       padding: 10px;
       border: 1px solid $mercury;
@@ -325,57 +356,18 @@
       color: $transparent-black;
       font-weight: 600;
       border-radius: 4px 4px 4px 4px;
-      @include tablet {
-        min-height: 100px;
-        width: 95%;
-        background-color: $weird-white;
-        padding: 10px;
-        border: 1px solid $mercury;
-        font-size: 15px;
-        font-family: "avenir", sans-serif;
-        color: $transparent-black;
-        font-weight: 600;
-        border-radius: 4px 4px 4px 4px;
-      }
-      @include desktop {
-        min-height: 100px;
-        width: 95%;
-        background-color: $weird-white;
-        padding: 10px;
-        border: 1px solid $mercury;
-        font-size: 15px;
-        font-family: "avenir", sans-serif;
-        color: $transparent-black;
-        font-weight: 600;
-        border-radius: 4px 4px 4px 4px;
-      }
     }
-    &--label {
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 30px;
-      margin-bottom: 5px;
-      color: $silver;
-    }
-
-    &--button {
-      @include button(15px, 100%);
-      @include desktop {
-        @include button(15px, 35%);
-        position: relative;
-        left: 25rem;
-        margin: 15px 0;
-        margin: 15px 0;
-      }
-      @include tablet {
-        @include button(15px, 30%);
-        position: relative;
-        left: 26.5rem;
-        margin: 15px 0;
-        margin: 15px 0;
-      }
-
-      margin: 15px 0;
+    @include desktop {
+      min-height: 100px;
+      width: 95%;
+      background-color: $weird-white;
+      padding: 10px;
+      border: 1px solid $mercury;
+      font-size: 15px;
+      font-family: "avenir", sans-serif;
+      color: $transparent-black;
+      font-weight: 600;
+      border-radius: 4px 4px 4px 4px;
     }
   }
   &__title {
@@ -401,7 +393,6 @@
     }
   }
 }
-
 .comments__wrapper {
   display: flex;
   justify-content: center;
