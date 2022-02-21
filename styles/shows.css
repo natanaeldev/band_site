@@ -16,101 +16,6 @@
   font-family: 400;
   font-style: normal;
 }
-/* Reset */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-body {
-  font-family: "avenir", sans-serif;
-  font-weight: 400;
-}
-
 .header {
   background-color: #323232;
   width: 100%;
@@ -137,6 +42,11 @@ body {
 .header__nav-bar-link {
   text-decoration: none;
   color: #ffffff;
+}
+@media screen and (min-width: 1280px) {
+  .header__nav-bar-link {
+    font-size: 1.25rem;
+  }
 }
 .header__nav-bar-link--active {
   border-bottom: 5px solid #fff;
@@ -185,12 +95,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1rem;
   height: 8vh;
-  padding-left: 30px;
+  padding-left: 1.875rem;
 }
 @media screen and (min-width: 1280px) {
   .header__nav-bar-logo {
-    padding-left: 150px;
+    padding-left: 9.375rem;
     height: 5vh;
   }
 }
@@ -255,12 +166,12 @@ body {
 }
 @media screen and (max-width: 767px) {
   .footer__title {
-    font-size: 30px;
+    font-size: 29px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer__title {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 20px;
   }
 }
@@ -426,12 +337,107 @@ span {
   }
 }
 
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: "avenir", sans-serif;
+  font-weight: 400;
+}
+
 .hero {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../../assets/Images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 70vh;
   width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -483,7 +489,7 @@ span {
 .hero__title {
   color: #ffffff;
   font-size: 1.875rem;
-  padding: 1.5rem 0;
+  padding: 2.5rem 0;
   line-height: 2.5rem;
   font-weight: 600;
   width: 75%;
@@ -493,7 +499,7 @@ span {
     color: #ffffff;
     font-size: 3.125rem;
     padding: 2rem 0;
-    line-height: 70px;
+    line-height: 4.375rem;
     font-weight: 600;
     width: 70%;
   }
@@ -502,8 +508,8 @@ span {
   .hero__title {
     margin: 2rem 0;
     color: #ffffff;
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 3.75rem;
+    line-height: 4.375rem;
     font-weight: 600;
     width: 100%;
   }
@@ -511,7 +517,7 @@ span {
 .hero__title-p {
   color: #ffffff;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   white-space: pre-line;
 }
 
@@ -519,25 +525,25 @@ span {
   .shows__wrapper {
     display: flex;
     flex-direction: column;
-    margin-left: 280px;
+    margin-left: 17.5rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows {
-    padding: 30px;
+    padding: 1.875rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows {
-    padding: 30px;
+    padding: 1.875rem;
   }
 }
 .shows__title {
   font-family: "avenir", sans-serif;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 2.188rem;
   margin: 2rem 0;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 .shows__list {
   display: flex;
@@ -545,7 +551,7 @@ span {
   list-style: none;
   border-bottom: 3px solid #e1e1e1;
   margin: 1rem 0;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 .shows__list:hover {
   background-color: #fafafa;
@@ -568,8 +574,8 @@ span {
     list-style: none;
     align-items: center;
     border-bottom: 3px solid #afafaf;
-    font-size: 14px;
-    padding: 24px 28px;
+    font-size: 0.875rem;
+    padding: 1.5rem 1.75rem;
   }
 }
 .shows__list-title {
@@ -603,7 +609,7 @@ span {
 }
 @media screen and (min-width: 1280px) {
   .shows__item {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .shows__item-title {
@@ -611,44 +617,44 @@ span {
   font-size: 0.85rem;
 }
 .shows__button {
-  height: 40px;
+  height: 2.5rem;
   width: 100%;
   border-radius: 4px;
   color: #ffffff;
   border: none;
   background-color: #323232;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 0.938rem;
+  line-height: 1.25rem;
   font-family: "avenir-bold", sans-serif;
   font-weight: 500;
-  height: 45px;
+  height: 2.813rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__button {
-    height: 40px;
+    height: 2.5rem;
     width: 25%;
     border-radius: 4px;
     color: #ffffff;
     border: none;
     background-color: #323232;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
     font-family: "avenir-bold", sans-serif;
     font-weight: 500;
     margin-left: 1rem;
-    height: 44px;
+    height: 2.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__button {
-    height: 40px;
+    height: 2.5rem;
     width: 20%;
     border-radius: 4px;
     color: #ffffff;
     border: none;
     background-color: #323232;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 0.938rem;
+    line-height: 1.25rem;
     font-family: "avenir-bold", sans-serif;
     font-weight: 500;
     margin-left: 1rem;

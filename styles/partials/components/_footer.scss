@@ -51,10 +51,10 @@
   }
   &__title {
     @include mobile {
-      font-size: 30px;
+      font-size: 29px;
     }
     @include tablet {
-      font-size: 40px;
+      font-size: 30px;
       margin-bottom: 20px;
     }
 

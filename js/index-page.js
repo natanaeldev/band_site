@@ -49,12 +49,12 @@ let displayComment = (comment) => {
     let day = dates.getDay();
     let month = dates.getMonth();
     let year = dates.getFullYear();
-    let fullDate = `${month} / ${day} / ${year}`;
+    let fullDate = `${month}/${day}/${year}`;
 
     return fullDate;
   };
 
-  commentsWrapper.prepend(comments);
+  commentsWrapper.appendChild(comments);
   comments.appendChild(headerDiv);
 
   headerDiv.appendChild(img);
@@ -87,7 +87,9 @@ let handleSubmit = (e) => {
           .then((response) => {
             console.log("Iam working");
             let comments = response.data;
-            commentsArray.push(comments);
+            comments.sort((a, b) => {
+              return b.timestamp - a.timestamp;
+            });
             comments.forEach((comment) => {
               console.log("Iam working1");
               displayComment(comment);

@@ -1,5 +1,6 @@
-@use "../partials/utilities/font";
-@use "../partials/utilities/mixin";
+@use "../partials/utilities/font" as *;
+@use "../partials/components/nav";
+@use "../partials/components/footer";
 /* Reset */
 html,
 body,

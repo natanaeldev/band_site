@@ -52,7 +52,7 @@
               >
             </blockquote>
             <h3 class="about__subtitle">The Bees Knees</h3>
-            <div class="about__wrapper-p">
+            <article class="about__wrapper-p">
               <p class="about__p">
                 The Bees Knees is a pop rock band originating from San
                 Francisco, California. The band consists of lead vocalist Bryan
@@ -76,7 +76,7 @@
                 recording their second studio album, looking to be released in
                 late 2021.
               </p>
-            </div>
+            </article>
           </div>
         </section>
         <section class="gallery">
@@ -87,6 +87,7 @@
               src="./assets/Images/Photo-gallery-1.jpg"
               alt="photo"
             />
+
             <img
               class="gallery__img"
               src="./assets/Images/Photo-gallery-2.jpg"
@@ -130,7 +131,7 @@
           </div>
         </section>
         <section class="conversation">
-          <h1 class="conversation__title">Join the Conversation</h1>
+          <h2 class="conversation__title">Join the Conversation</h2>
           <div class="conversation__wrapper">
             <img
               src="./assets/Images/Mohan-muruge.jpg"
@@ -143,9 +144,7 @@
               id="conversation__form"
               class="conversation__form"
             >
-              <label class="conversation__form-label" for="name" id="name"
-                >NAME
-              </label>
+              <label class="conversation__form-label" for="name">NAME </label>
               <input
                 class="conversation__form-field"
                 name="name"
@@ -154,16 +153,13 @@
                 placeholder="Enter your name"
               />
 
-              <label
-                class="conversation__form-label"
-                for="comments"
-                id="comment"
+              <label class="conversation__form-label" for="comments"
                 >COMMENT
               </label>
               <textarea
                 class="conversation__form-comments"
                 name="comments"
-                id="comment"
+                id="comments"
                 type="text"
                 placeholder="Add a new comments"
               ></textarea>
@@ -171,11 +167,11 @@
               <button class="conversation__form-button">COMMENT</button>
             </form>
           </div>
-          <div class="comments__wrapper">
-            <div class="comment">
+          <section class="comments__wrapper">
+            <article class="comment">
               <!--this is where the commands appears  -->
-            </div>
-          </div>
+            </article>
+          </section>
         </section>
       </div>
     </main>
