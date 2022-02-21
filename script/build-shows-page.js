@@ -2,32 +2,38 @@ const apiKey = "b755b467-27d6-4447-ad13-f5267b05306c";
 const url = "https://project-1-api.herokuapp.com/showdates?api_key=";
 const showsDates = [];
 
-axios.get(`${url}${apiKey}`).then((show) => {
-  showsDates.push(show.data);
-  showsDates.forEach((show) => {
-    show.forEach((data) => {
-      displayShows(data);
+axios
+  .get(`${url}${apiKey}`)
+  .then((show) => {
+    showsDates.push(show.data);
+    showsDates.forEach((show) => {
+      show.forEach((data) => {
+        displayShows(data);
+      });
     });
+  })
+  .catch((err) => {
+    console.log(err);
   });
-});
 
 // Creating the div for the shows table
 let displayShows = (show) => {
   let shows = document.querySelector(".shows");
   let showsWrapper = document.createElement("div");
   showsWrapper.classList.add("shows__wrapper");
+
   let showList = document.createElement("ul");
   showList.classList.add("shows__list");
   //creating the li for the title
-  let showItemtDate = document.createElement("li");
-  let showItemtVenue = document.createElement("li");
-  let showItemtLocation = document.createElement("li");
-  showItemtDate.classList.add("shows__item-title");
-  showItemtDate.classList.add("hidden");
-  showItemtVenue.classList.add("shows__item-title");
-  showItemtVenue.classList.add("hidden");
-  showItemtLocation.classList.add("shows__item-title");
-  showItemtLocation.classList.add("hidden");
+  let showItemTitleDate = document.createElement("li");
+  let showItemTitleVenue = document.createElement("li");
+  let showItemTitleLocation = document.createElement("li");
+  showItemTitleDate.classList.add("shows__item-title");
+  showItemTitleDate.classList.add("hidden");
+  showItemTitleVenue.classList.add("shows__item-title");
+  showItemTitleVenue.classList.add("hidden");
+  showItemTitleLocation.classList.add("shows__item-title");
+  showItemTitleLocation.classList.add("hidden");
 
   //creating the li for the content
   let showItemDate = document.createElement("li");
@@ -64,14 +70,12 @@ let displayShows = (show) => {
     return fullDate;
   };
 
-  // // console.log(date);
-  // date.toLocaleString();
   showsWrapper.appendChild(showList);
-  showList.appendChild(showItemtDate).innerText = "DATE";
+  showList.appendChild(showItemTitleDate).innerText = "DATE";
   showList.appendChild(showItemDate).innerText = date(show.date);
-  showList.appendChild(showItemtVenue).innerText = "VENUE";
+  showList.appendChild(showItemTitleVenue).innerText = "VENUE";
   showList.appendChild(showItemVenue).innerText = show.place;
-  showList.appendChild(showItemtLocation).innerText = "LOCATION";
+  showList.appendChild(showItemTitleLocation).innerText = "LOCATION";
   showList.appendChild(showItemLocation).innerText = show.location;
   showList.appendChild(showItemButton);
   showList.appendChild(showDisplayButton);

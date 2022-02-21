@@ -8,23 +8,27 @@ let commentsWrapper = document.querySelector(".comments__wrapper");
 let currentDate = new Date().toLocaleDateString();
 
 // This api call display all the comments
-axios.get(`${url}${apiKey}`).then((comment) => {
-  commentsArray.push(comment.data);
-  let comments = comment.data;
-  comments.sort((a, b) => {
-    return b.timestamp - a.timestamp;
-  });
-
-  commentsArray.forEach((comment) => {
-    comment.forEach((data) => {
-      displayComment(data);
+axios
+  .get(`${url}${apiKey}`)
+  .then((comment) => {
+    commentsArray.push(comment.data);
+    let comments = comment.data;
+    comments.sort((a, b) => {
+      return b.timestamp - a.timestamp;
     });
+
+    commentsArray.forEach((comment) => {
+      comment.forEach((data) => {
+        displayComment(data);
+      });
+    });
+  })
+  .catch((err) => {
+    console.log(err);
   });
-});
 
 let displayComment = (comment) => {
-  console.log(comment);
-  let comments = document.createElement("div");
+  let comments = document.createElement("article");
   comments.classList.add("comment");
 
   let headerDiv = document.createElement("div");
@@ -48,6 +52,7 @@ let displayComment = (comment) => {
 
   commentsWrapper.classList.add("comments__wrapper");
 
+  // This function Just return the corrent date.
   let date = (date) => {
     let dates = new Date(Number(date));
 
@@ -60,7 +65,7 @@ let displayComment = (comment) => {
   };
 
   let currentDate = date(comment.timestamp);
-  console.log(currentDate);
+
   commentsWrapper.appendChild(comments);
   comments.appendChild(headerDiv);
 
@@ -92,13 +97,11 @@ let handleSubmit = (e) => {
         axios
           .get(`${url}${apiKey}`)
           .then((response) => {
-            console.log("Iam working");
             let comments = response.data;
             comments.sort((a, b) => {
               return b.timestamp - a.timestamp;
             });
             comments.forEach((comment) => {
-              console.log("Iam working1");
               displayComment(comment);
             });
           })
