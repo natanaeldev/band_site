@@ -10,6 +10,11 @@ let currentDate = new Date().toLocaleDateString();
 // This api call display all the comments
 axios.get(`${url}${apiKey}`).then((comment) => {
   commentsArray.push(comment.data);
+  let comments = comment.data;
+  comments.sort((a, b) => {
+    return b.timestamp - a.timestamp;
+  });
+
   commentsArray.forEach((comment) => {
     comment.forEach((data) => {
       displayComment(data);
@@ -45,15 +50,17 @@ let displayComment = (comment) => {
 
   let date = (date) => {
     let dates = new Date(Number(date));
-    dates.toISOString();
-    let day = dates.getDay();
-    let month = dates.getMonth();
+
+    let day = dates.getDate();
+    let month = dates.getMonth() + 1;
     let year = dates.getFullYear();
     let fullDate = `${month}/${day}/${year}`;
 
     return fullDate;
   };
 
+  let currentDate = date(comment.timestamp);
+  console.log(currentDate);
   commentsWrapper.appendChild(comments);
   comments.appendChild(headerDiv);
 
@@ -61,7 +68,7 @@ let displayComment = (comment) => {
   headerDiv.appendChild(commentUl);
 
   commentUl.appendChild(names).innerText = comment.name;
-  commentUl.appendChild(Dates).innerText = date(comment.timestamp);
+  commentUl.appendChild(Dates).innerText = currentDate;
 
   comments.appendChild(paragraph).innerText = comment.comment;
 };

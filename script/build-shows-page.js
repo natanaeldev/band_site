@@ -55,8 +55,9 @@ let displayShows = (show) => {
 
   let date = (date) => {
     let dates = new Date(Number(date));
-    let day = dates.getDay();
-    let month = dates.getMonth();
+
+    let day = dates.getDate();
+    let month = dates.getMonth() + 1;
     let year = dates.getFullYear();
     let fullDate = `${month}/${day}/${year}`;
 
