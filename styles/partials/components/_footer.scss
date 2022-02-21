@@ -4,30 +4,30 @@
   background-color: $transparent-black;
   color: $white;
   @include mobile {
-    padding: 16px;
-    padding-top: 40px;
-    font-size: 15px;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 0.938rem;
     font-family: "avenir", sans-serif;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 1.25rem;
   }
 
   @include tablet {
-    padding: 36px;
-    padding-top: 40px;
-    font-size: 15px;
+    padding: 2.25rem;
+    padding-top: 2.5rem;
+    font-size: 0.938rem;
     font-family: "avenir", sans-serif;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 1.875rem;
   }
   @include desktop {
-    padding: 36px;
-    padding-top: 40px;
+    padding: 2.25rem;
+    padding-top: 2.5rem;
   }
 
   @include desktop {
     // padding: 100px;
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
 
   &__header {
@@ -51,16 +51,16 @@
   }
   &__title {
     @include mobile {
-      font-size: 29px;
+      font-size: 1.813rem;
     }
     @include tablet {
-      font-size: 30px;
-      margin-bottom: 20px;
+      font-size: 1.875rem;
+      margin-bottom: 1.25rem;
     }
 
     @include desktop {
-      font-size: 30px;
-      margin-bottom: 20px;
+      font-size: 1.875rem;
+      margin-bottom: 1.25rem;
     }
   }
   &__wrapper {
@@ -83,23 +83,23 @@
   &__icon {
     @include mobile {
       display: flex;
-      margin-right: 20px;
-      height: 30px;
-      margin-bottom: 20px;
+      margin-right: 1.25rem;
+      height: 1.875rem;
+      margin-bottom: 1.25rem;
     }
 
     @include tablet {
       display: flex;
-      margin-right: 20px;
+      margin-right: 1.25rem;
 
-      height: 30px;
-      margin-bottom: 20px;
+      height: 1.875rem;
+      margin-bottom: 1.25rem;
     }
     @include desktop {
       display: flex;
-      margin-right: 20px;
-      height: 30px;
-      margin-bottom: 20px;
+      margin-right: 1.25rem;
+      height: 1.875rem;
+      margin-bottom: 1.25rem;
     }
   }
   &__icon-box {
@@ -135,19 +135,19 @@
       display: flex;
       flex-direction: column;
       margin: 0.55 0;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
     @include tablet {
       display: flex;
       flex-direction: column;
       align-items: baseline;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
     @include desktop {
       display: flex;
       flex-direction: column;
       align-items: baseline;
-      font-size: 15px;
+      font-size: 0.938rem;
     }
   }
 
@@ -157,19 +157,19 @@
 
   &__logo {
     @include mobile {
-      margin-top: 85px;
-      margin-bottom: 20px;
+      margin-top: 5.313rem;
+      margin-bottom: 1.25rem;
     }
     @include tablet {
-      margin: 0px;
+      margin: 0;
     }
     @include desktop {
-      margin: 0px;
+      margin: 0;
     }
   }
 
   &__copy-right {
-    font-size: 15px;
+    font-size: 0.938rem;
   }
 }
 
